@@ -3,6 +3,9 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ *
+ */
 class Mesa {
     private int numero;
     private int capacidad;
@@ -30,6 +33,11 @@ class Mesa {
         return ocupada;
     }
 
+    /**
+     *
+     * @param nombre
+     * @param hora
+     */
     public void ocupar(String nombre, String hora) {
         ocupada = true;
         nombreReserva = nombre;
