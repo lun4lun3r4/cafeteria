@@ -154,6 +154,11 @@ class Cafeteria {
             return null;
         }
     }
+    /**
+     * Libera una mesa reservada en la cafetería.
+     *
+     * @param numMesa el número de la mesa a liberar.
+     */
 
     public void liberarMesa(int numMesa) {
         if (numMesa < 1 || numMesa > mesas.size()) {
@@ -164,6 +169,12 @@ class Cafeteria {
         mesa.desocupar();
         System.out.println("¡La mesa " + mesa.getNumero() + " ha sido liberada!");
     }
+    /**
+     * Valida el formato de la hora.
+     *
+     * @param time la hora a validar en formato HH:MM.
+     * @return true si la hora es válida, false en caso contrario.
+     */
 
     private boolean validateTime(String time) {
         String timeRegex = "([01]?[0-9]|2[0-3]):[0-5][0-9]";
@@ -172,6 +183,9 @@ class Cafeteria {
         return matcher.matches();
     }
 }
+/**
+ * Clase principal para manejar las reservas de mesas en una cafetería.
+ */
 
 public class ReservarMesa {
     public static void main(String[] args) {
