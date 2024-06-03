@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- *
+ * Clase que representa una mesa en una cafetería.
  */
 class Mesa {
     private int numero;
@@ -13,6 +13,13 @@ class Mesa {
     private String nombreReserva;
     private String horaReserva;
 
+    /**
+     * Constructor para la clase Mesa.
+     *
+     * @param numero el número de la mesa.
+     * @param capacidad la capacidad de la mesa.
+     */
+
     public Mesa(int numero, int capacidad) {
         this.numero = numero;
         this.capacidad = capacidad;
@@ -20,10 +27,20 @@ class Mesa {
         this.nombreReserva = null;
         this.horaReserva = null;
     }
+    /**
+     * Obtiene el número de la mesa.
+     *
+     * @return el número de la mesa.
+     */
 
     public int getNumero() {
         return numero;
     }
+    /**
+     * Obtiene la capacidad de la mesa.
+     *
+     * @return la capacidad de la mesa.
+     */
 
     public int getCapacidad() {
         return capacidad;
@@ -34,9 +51,9 @@ class Mesa {
     }
 
     /**
+     * Verifica si la mesa está ocupada.
      *
-     * @param nombre
-     * @param hora
+     * @return true si la mesa está ocupada, false en caso contrario.
      */
     public void ocupar(String nombre, String hora) {
         ocupada = true;
