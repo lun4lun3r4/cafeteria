@@ -45,37 +45,58 @@ class Mesa {
     public int getCapacidad() {
         return capacidad;
     }
+    /**
+     * Verifica si la mesa está ocupada.
+     *
+     * @return true si la mesa está ocupada, false en caso contrario.
+     */
 
     public boolean estaOcupada() {
         return ocupada;
     }
 
     /**
-     * Verifica si la mesa está ocupada.
+     * Ocupa la mesa con una reserva.
      *
-     * @return true si la mesa está ocupada, false en caso contrario.
+     * @param nombre el nombre de la persona que reserva la mesa.
+     * @param hora la hora de la reserva en formato HH:MM.
      */
     public void ocupar(String nombre, String hora) {
         ocupada = true;
         nombreReserva = nombre;
         horaReserva = hora;
     }
+    /**
+     * Libera la mesa de una reserva.
+     */
 
     public void desocupar() {
         ocupada = false;
         nombreReserva = null;
         horaReserva = null;
     }
+    /**
+     * Obtiene el nombre de la persona que ha reservado la mesa.
+     *
+     * @return el nombre de la persona que ha reservado la mesa.
+     */
 
     public String getNombreReserva() {
         return nombreReserva;
     }
+    /**
+     * Obtiene la hora de la reserva.
+     *
+     * @return la hora de la reserva en formato HH:MM.
+     */
 
     public String getHoraReserva() {
         return horaReserva;
     }
 }
-
+/**
+ * Clase que representa una cafetería con varias mesas.
+ */
 class Cafeteria {
     private ArrayList<Mesa> mesas;
 
