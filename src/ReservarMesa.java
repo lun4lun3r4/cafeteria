@@ -99,6 +99,10 @@ class Mesa {
  */
 class Cafeteria {
     private ArrayList<Mesa> mesas;
+    /**
+     * Constructor para la clase Cafeteria.
+     * Inicializa la lista de mesas con mesas predefinidas.
+     */
 
     public Cafeteria() {
         mesas = new ArrayList<>();
@@ -109,6 +113,9 @@ class Cafeteria {
         mesas.add(new Mesa(5, 2));
         mesas.add(new Mesa(6, 8));
     }
+    /**
+     * Muestra las mesas disponibles en la cafetería.
+     */
 
     public void mostrarMesasDisponibles() {
         System.out.println("Mesas disponibles:");
@@ -118,6 +125,15 @@ class Cafeteria {
             }
         }
     }
+    /**
+     * Reserva una mesa en la cafetería.
+     *
+     * @param numMesa el número de la mesa a reservar.
+     * @param numPersonas el número de personas para la reserva.
+     * @param nombre el nombre de la persona que realiza la reserva.
+     * @param hora la hora de la reserva en formato HH:MM.
+     * @return la mesa reservada si la reserva es exitosa, null en caso contrario.
+     */
 
     public Mesa reservarMesa(int numMesa, int numPersonas, String nombre, String hora) {
         if (numMesa < 1 || numMesa > mesas.size()) {
